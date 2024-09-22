@@ -126,8 +126,8 @@ set_target_properties(libiconv PROPERTIES
 
 
 ExternalProject_Add(xml2
-        URL https://download.gnome.org/sources/libxml2/2.9/libxml2-2.9.14.tar.xz
-        URL_HASH MD5=b7b3029ac6beb32a7925225515f83ca3
+        URL https://download.gnome.org/sources/libxml2/2.13/libxml2-2.13.4.tar.xz
+        URL_HASH MD5=1c5f9cfeee665eb6f1ddc186aba4cf2f
         CONFIGURE_COMMAND ${CROSS_COMPILE_PREFIX} <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> --host ${ANDROID_LLVM_TRIPLE} --without-python --with-lzma=${XZ_INSTALL_DIR}
         BUILD_COMMAND make
         INSTALL_COMMAND make install
