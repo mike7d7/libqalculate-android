@@ -10,13 +10,13 @@ include(UseSWIG)
 
 # C compiler wrapper
 set(C_COMPILER_WRAPPER ${CMAKE_CURRENT_BINARY_DIR}/c_compiler_wrapper)
-file( WRITE  ${C_COMPILER_WRAPPER} "#!/bin/bash\n")
+file( WRITE  ${C_COMPILER_WRAPPER} "#!/bin/sh\n")
 file( APPEND  ${C_COMPILER_WRAPPER} "${CMAKE_C_COMPILER} --target=${CMAKE_C_COMPILER_TARGET} \"$@\"")
 execute_process(COMMAND chmod +x ${C_COMPILER_WRAPPER})
 
 # CXX compiler wrapper
 set(CXX_COMPILER_WRAPPER ${CMAKE_CURRENT_BINARY_DIR}/cxx_compiler_wrapper)
-file( WRITE  ${CXX_COMPILER_WRAPPER} "#!/bin/bash\n")
+file( WRITE  ${CXX_COMPILER_WRAPPER} "#!/bin/sh\n")
 file( APPEND  ${CXX_COMPILER_WRAPPER} "${CMAKE_CXX_COMPILER} --target=${CMAKE_CXX_COMPILER_TARGET} \"$@\"")
 execute_process(COMMAND chmod +x ${CXX_COMPILER_WRAPPER})
 

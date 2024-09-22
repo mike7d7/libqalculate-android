@@ -46,8 +46,3 @@ pkgs.mkShell {
   '';
 }
 
-# First run will fail due to c compiler can not create executables, this can be fixed
-# by manually editing the c_compiler_wrapper and cxx_compiler_wrapper and changing
-# the shebang (#!/bin/bash) to #!/bin/sh
-
-# Also have to change libxml2 version to 2.12.6
